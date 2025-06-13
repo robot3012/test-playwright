@@ -22,7 +22,7 @@ test.skip ('Test de Copy', async ({page}) => {
     await page.pause();
 });
 
-test.only ('Test de Select', async ({page}) => {
+test ('Test de Select', async ({page}) => {
     await page.goto('https://testertestarudo.com/sandbox-para-pruebas-automatizadas/');
     await page.locator('//*[@id="developerRoles"]').selectOption('Backend Developer');
     await expect(page.locator('//*[text()="Form submitted!"]')).toBeHidden();
